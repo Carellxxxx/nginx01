@@ -29,7 +29,7 @@ env:
   REGISTRY: registry.me-central-1.aliyuncs.com
   NAMESPACE: t1
   IMAGE: repo
-  TAG: ${{ t1 }}
+  TAG: ${{ github.sha }}
   ACK_CLUSTER_ID: 8bf8fdb3ca364a49a01fad0c80f5cd86
   ACK_DEPLOYMENT_NAME: nginx-deployment
 
