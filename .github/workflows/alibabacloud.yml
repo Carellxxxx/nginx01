@@ -32,6 +32,8 @@ env:
   TAG: ${{ github.sha }}
   ACK_CLUSTER_ID: 8bf8fdb3ca364a49a01fad0c80f5cd86
   ACK_DEPLOYMENT_NAME: nginx-deployment
+  TempUsername: eyJpbnN0YW5jZUlkIjoiY3JpLTNuOTd0Y21zMG1oNjFtaTEiLCJ0aW1lIjoiMTcxNTI1NTg0MjAwMCIsInR5cGUiOiJzdWIiLCJ1c2VySWQiOiIyMTY1NjQzMDk2ODk2Mzc1MjkifQ:9f6368033cdc9e8d3b0825b70a31b43528471c54
+  password: cr_temp_user
 
   ACR_EE_REGISTRY: test001-registry.me-central-1.cr.aliyuncs.com
   ACR_EE_INSTANCE_ID: crr-knfz2xr1oz3163ls
@@ -52,12 +54,12 @@ jobs:
       uses: actions/checkout@v4
 
     # 1.1 Login to ACR
-    - name: Login to ACR with the AccessKey pair
-      uses: aliyun/acr-login@v1
-      with:
-        region-id: "${{ env.REGION_ID }}"
-        access-key-id: "${{ secrets.ACCESS_KEY_ID }}"
-        access-key-secret: "${{ secrets.ACCESS_KEY_SECRET }}"
+#    - name: Login to ACR with the AccessKey pair
+#     uses: aliyun/acr-login@v1
+#      with:
+#        region-id: "${{ env.REGION_ID }}"
+#        access-key-id: "${{ secrets.ACCESS_KEY_ID }}"
+#        access-key-secret: "${{ secrets.ACCESS_KEY_SECRET }}"
 
     # 1.2 Build and push image to ACR
     - name: Build and push image to ACR
