@@ -26,7 +26,7 @@ on:
 # Environment variables available to all jobs and steps in this workflow.
 env:
   REGION_ID: me-central-1
-  REGISTRY: registry.me-central-1.aliyuncs.com
+  REGISTRY: test001-registry.me-central-1.cr.aliyuncs.com
   NAMESPACE: t1
   IMAGE: repo
   TAG: ${{ github.sha }}
